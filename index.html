@@ -10,7 +10,7 @@
     .expose {visibility:visible;display:block;} /* Here for completeness only. */
     .copyright {padding:5px;align:left;font-style:italic;font-size:small;}
     #header {margin:0;padding:0;}
-    #exitApp {margin:1em;float:right;}
+    #exitApp {margin:0.1em;float:right;}
     </style>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/fastclick.js"></script>
@@ -18,7 +18,7 @@
     <script type="text/javascript">
     function onButtonClick() {
         alert("button clicked.");
-        //document.getElementById('sysinfo').innerHTML = JSON.stringify(Sysinfo, null, 4);
+        //document.getElementById('info').innerHTML = JSON.stringify(Sysinfo, null, 4);
     }
     //
     // Wait for PhoneGap to load
@@ -48,7 +48,7 @@
 <div id=header class="button button-block button-large">
     <img align=left src=images/favicon-48x48.png>
     Phonegap Generic Boilerplate #2
-    <button id=exitApp onclick='navigator.app.exitApp()' class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">Exit</button>
+    <button id=exitApp onclick='navigator.app.exitApp()' class="button button-pill button-primary button-large">Exit</button>
 </div>
 
 <div id=content style="margin:1em;">content</div>
