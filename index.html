@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>PhoneGap Generic Boilerplate #2</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/buttons.css" />
     <style>
     body {margin:0px;font-size:large;}
@@ -23,8 +23,6 @@
     //
     // Wait for PhoneGap to load
     document.addEventListener("deviceready", onDeviceReady, false);
-    // Get rid of 300ms delay 
-    document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
     //
     function onDeviceReady() {
         alert("device ready.");
@@ -33,9 +31,12 @@
             // hide Exit button. They don't have one on iOS devices.
             // http://www.mzcart.com/javascript-how-to-addremove-css-class-from-a-dom-element/
             document.getElementById('exitApp').classList.add("hidden");
-            /* deals with post-iOS-7 change that covers the status bar */
-            /* http://coenraets.org/blog/2013/09/phonegap-and-cordova-with-ios-7/ */
+            // deals with post-iOS-7 change that covers the status bar
+            // http://coenraets.org/blog/2013/09/phonegap-and-cordova-with-ios-7/
             document.body.style.marginTop = "20px";
+        } else if (device.platform == 'Android') {
+            // Get rid of 300ms delay 
+            document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
         }
     }
     //
