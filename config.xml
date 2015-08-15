@@ -18,6 +18,6 @@
 
         <!-- PLUGINS PLUGINS -->
         <!-- device required so we can detect if we are using iOS -->
-        <gap:plugin name="org.apache.cordova.device" />
+        <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 
     </widget>
